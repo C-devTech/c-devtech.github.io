@@ -10,9 +10,11 @@
 
 <script type="text/processing" data-processing-target="mycanvas">
 
-final int DPIofYourDeviceScreen = 326; //you will need to measure or look up the DPI or PPI of your device/browser to make sure you get the right scale!!
+final int DPIofYourDeviceScreen = 440; //you will need to measure or look up the DPI or PPI of your device/browser to make sure you get the right scale!!
 final float sizeOfInputArea = DPIofYourDeviceScreen*1; //aka, 1.0 inches square!
 final int textSizeLarge = (DPIofYourDeviceScreen / 110) * 12;
+final int screenWidth = 800;
+final int screenHeight = 800;
 
 int totalTrialNum = 2; //the total number of phrases to be tested - set this low for testing. Might be ~10 for the real bakeoff!
 int currTrialNum = 0; // the current trial number (indexes into trials array above)
@@ -31,7 +33,7 @@ int currentLetter = int('a');
 //You can add stuff in here. This is just a basic implementation.
 void setup()
 {
-  size(1080, 1334); //Sets the size of the app. You should modify this to your device's native size. Many phones today are 1080 wide by 1920 tall.
+  size(screenWidth, screenHeight); //Sets the size of the app. You should modify this to your device's native size. Many phones today are 1080 wide by 1920 tall.
   noStroke(); //my code doesn't use any strokes.
 
   //randomize the phrase order
