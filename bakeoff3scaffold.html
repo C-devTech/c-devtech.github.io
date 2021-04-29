@@ -12,6 +12,7 @@
 
 final int DPIofYourDeviceScreen = 440; //you will need to measure or look up the DPI or PPI of your device/browser to make sure you get the right scale!!
 final float sizeOfInputArea = DPIofYourDeviceScreen*1; //aka, 1.0 inches square!
+final int textSizeLarge = (DPIofYourDeviceScreen / 110) * 12;
 
 int totalTrialNum = 2; //the total number of phrases to be tested - set this low for testing. Might be ~10 for the real bakeoff!
 int currTrialNum = 0; // the current trial number (indexes into trials array above)
@@ -54,6 +55,7 @@ void draw()
   {
     fill(0);
     textAlign(CENTER);
+    textSize(textSizeLarge);
     text("Trials complete!",400,200); //output
     text("Total time taken: " + (finishTime - startTime),400,220); //output
     text("Total letters entered: " + lettersEnteredTotal,400,240); //output
